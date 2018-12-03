@@ -21,7 +21,7 @@ public class SerializeDemo {
             e.printStackTrace();
         }
     }
-
+    @SuppressWarnings("unchecked")
     private void readFromFile() throws IOException, ClassNotFoundException {
         File file = new File(filePath);
         FileInputStream fileInputStream = new FileInputStream(file);
@@ -31,7 +31,7 @@ public class SerializeDemo {
     }
 
     private void saveIntoFile() throws IOException {
-        List<Person> personList = ModelUtil.createPersonList();
+        List<Person> personList = ModelUtil.createPersonListForSerialization();
         File file = new File(filePath);
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);

@@ -1,4 +1,5 @@
 package com.usman.practice.model;
+
 import java.io.Serializable;
 
 public class Person implements Comparable<Person>, Serializable {
@@ -6,11 +7,19 @@ public class Person implements Comparable<Person>, Serializable {
     private int age;
     private String address;
     private Double height;
+    private transient Address personalAddress;// This must be implemented as serializable to serialize object
 
     public Person(String name, int age, String address, Double height) {
         this.name = name;
         this.age = age;
         this.address = address;
+        this.height = height;
+    }
+
+    public Person(String name, int age, Address address, Double height) {
+        this.name = name;
+        this.age = age;
+        this.personalAddress = address;
         this.height = height;
     }
 
