@@ -1,8 +1,7 @@
 package com.usman.practice.model;
+import java.io.Serializable;
 
-import java.util.Comparator;
-
-public class Person implements Comparable<Person> {
+public class Person implements Comparable<Person>, Serializable {
     private String name;
     private int age;
     private String address;
