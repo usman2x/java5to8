@@ -3,11 +3,18 @@ package com.usman.practice.model;
 import java.io.Serializable;
 
 public class Person implements Comparable<Person>, Serializable {
+    private String id;
     private String name;
     private int age;
     private String address;
     private Double height;
     private transient Address personalAddress;// This must be implemented as serializable to serialize object
+
+    public Person(String id, String name, int age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    }
 
     public Person(String name, int age, String address, Double height) {
         this.name = name;
@@ -63,6 +70,21 @@ public class Person implements Comparable<Person>, Serializable {
                 ", address='" + address + '\'' +
                 ", height=" + height +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Person person = (Person) o;
+
+        return id.equals(person.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return id.hashCode();
     }
 
     @Override
