@@ -1,4 +1,4 @@
-package com.usman.example.kafka.kafkasample.lamda;
+package com.usman.practice.java8.lambda;
 
 public class Game {
     public static void main(String[] args) {
