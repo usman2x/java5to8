@@ -25,6 +25,10 @@ import java.util.stream.Stream;
  * {@link Collection#stream}
  * {@link #getStringStream} method.
  * {@link #getIntStream} method.
+ * <p>
+ * We can't use Stream twice, Illegal State Exception
+ * Lambda Expressions, Method Reference
+ * Intermediate operations: map, filter, peek, boxed, sorted
  */
 public class StreamApp {
     public static void main(String[] args) {
