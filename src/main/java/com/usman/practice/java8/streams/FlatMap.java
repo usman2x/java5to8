@@ -1,4 +1,4 @@
-package com.ccs.mmf;
+package com.usman.practice.java8.streams;
 
 import java.util.ArrayList;
 import java.util.List;
